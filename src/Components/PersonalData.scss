@@ -1,0 +1,83 @@
+@import "../Theme.scss";
+
+.personal-data {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  transition: flex-grow 0.3s ease;
+
+  &.collapse {
+    flex-grow: 0.01;
+  }
+
+  .portrait-name {
+    display: flex;
+    flex-direction: row;
+
+    .portrait {
+      flex: 1 1 8rem;
+      max-width: 8rem;
+      background: url("../yoni.jpg") no-repeat no-repeat center;
+      background-size: cover;
+      opacity: 0.5;
+    }
+    .name {
+      flex: 3;
+      padding: 16px;
+      background-color: $dark;
+
+      h1 {
+        font: 600 24px "Montserrat";
+        margin: 8px 0 0 8px;
+        white-space: nowrap;
+      }
+      p {
+        margin: 8px;
+        font: 300 16px "Montserrat";
+        white-space: nowrap;
+      }
+
+      div {
+        margin-top: 16px;
+        display: flex;
+        white-space: nowrap;
+        i {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  &-section {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    height: 5rem;
+    padding: 8px;
+    margin-top: 8px;
+    background-color: $dark;
+    overflow: hidden;
+  }
+
+  .contacto {
+    .contacto-field {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 16px;
+      svg,
+      i {
+        width: 32px;
+        margin-right: 12px;
+        text-align: center;
+        fill: $light;
+      }
+      a {
+        flex: 1;
+        text-decoration: none;
+        color: $light;
+      }
+    }
+  }
+}

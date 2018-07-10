@@ -1,0 +1,22 @@
+.skill {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 8px; }
+  .skill img {
+    width: 24px;
+    background-size: cover; }
+  .skill p {
+    flex: 1;
+    margin: 8px;
+    font: 300 14px "Montserrat"; }
+  .skill .skill-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .skill .skill-bar .skill-point {
+      width: 12px;
+      height: 12px;
+      margin: 4px; }

@@ -1,0 +1,29 @@
+@import "../Theme.scss";
+
+.skills-container {
+  background-color: $dark;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+
+  h3 {
+    text-align: center;
+    font: 400 24px "Open Sans";
+    margin: 8px;
+  }
+
+  button {
+    border: none;
+    background: 0;
+    color: $light;
+    width: 30%;
+    margin: auto;
+    padding: 8px;
+    outline: none;
+    transition: color 0.3s ease;
+    &:hover {
+      cursor: pointer;
+      color: $primary-light;
+    }
+  }
+}
