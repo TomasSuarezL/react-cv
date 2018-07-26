@@ -1,0 +1,58 @@
+@import "../Theme.scss";
+
+.hobbies-container {
+  background-color: $dark;
+  margin: 4px;
+  padding: 8px;
+  h3 {
+    text-align: center;
+    font: 400 24px "Open Sans";
+    margin: 8px;
+  }
+  .hobbies {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 8px;
+
+    .hobby {
+      flex: 1;
+      margin: 8px;
+      max-width: 10rem;
+      min-width: 7rem;
+      border: 1px solid $primary;
+      border-radius: 4px;
+      padding: 8px;
+      transition: background-color 0.3s ease;
+      &:hover {
+        background-color: $primary-light;
+
+        .hobby-image {
+          background: $dark;
+        }
+      }
+
+      p {
+        text-align: center;
+      }
+
+      &-image {
+        width: 3rem;
+        border: 1px solid $light;
+        border-radius: 50%;
+        padding: 24px;
+        margin: 8px auto;
+        background-color: $primary-light;
+        opacity: 0.7;
+        display: flex;
+        align-items: center;
+        img {
+          width: 48px;
+          flex: 1;
+        }
+      }
+    }
+  }
+}

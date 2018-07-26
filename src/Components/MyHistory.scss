@@ -4,6 +4,10 @@
   display: flex;
   flex-direction: row;
 
+  @media screen and (max-width: $large-break) {
+    flex-direction: column;
+  }
+
   .projects-container {
     flex: 1;
     display: flex;
@@ -31,25 +35,51 @@
         margin: 0;
         text-decoration: none;
         color: $light;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-          background-color: $primary;
-        }
+        overflow: hidden;
       }
 
       .project {
-        height: 6rem;
-        min-width: 15rem;
-        flex: 1 1 30%;
+        height: 9rem;
+        min-width: 20rem;
+        max-width: 50%;
         display: flex;
         flex-direction: column;
+        flex: 1 1 30%;
         border: 1px solid $primary;
         border-radius: 4px;
-        padding: 16px;
         margin: 8px;
-        p {
-          margin: 8px;
+
+        div {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+
+          &.project-hover {
+            background-color: $darkest;
+            border-radius: 4px;
+            overflow: hidden;
+
+            .project-stack {
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-start;
+              align-items: center;
+              font: 300 13px "Montserrat";
+              color: $primary-light;
+              img {
+                flex: 1;
+                max-width: 24px;
+                height: 24px;
+                margin: 8px 16px;
+              }
+              p {
+                margin-right: 16px;
+              }
+            }
+          }
+          p {
+            margin: 8px;
+          }
         }
       }
     }
@@ -135,4 +165,24 @@
       }
     }
   }
+}
+
+.project-enter {
+  opacity: 0;
+  transform: translateY(10rem);
+}
+.project-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.1s ease-in-out;
+}
+
+.project-exit {
+  opacity: 0.01;
+  transform: translateY(-10rem);
+}
+.project-exit-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.1s ease-out;
 }

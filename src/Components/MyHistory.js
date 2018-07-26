@@ -1,5 +1,16 @@
 import React, { Component } from "react";
+import { CSSTransition } from "react-transition-group";
 import "./MyHistory.css";
+import PythonLogo from "../Static/Techs/Python.svg";
+import FlaskLogo from "../Static/Techs/flask-logo.png";
+import HTMLLogo from "../Static/Techs/HTML.svg";
+import JQueryLogo from "../Static/Techs/jquery-original.svg";
+import SassLogo from "../Static/Techs/Sass.svg";
+import PostgresLogo from "../Static/Techs/Postgresql.svg";
+import d3Logo from "../Static/Techs/d3.png";
+import ReactLogo from "../Static/Techs/React.svg";
+import ReduxLogo from "../Static/Techs/Redux.svg";
+import AndroidLogo from "../Static/Techs/Android.svg";
 
 /* Todo: Podria usar un Componente de Timeline para todos los items de historia, pasando un array de eventos como props. */
 const MyEducation = props => {
@@ -121,14 +132,56 @@ const MyExperience = props => {
   );
 };
 
-const Project = props => {
-  return (
-    <a href={props.url} className="project">
-      <p style={{ fontWeight: "600" }}>{props.nombre}</p>
-      <p style={{ font: "300 13px 'Montserrat'" }}>{props.descripcion}</p>
-    </a>
-  );
-};
+class Project extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hovered: false
+    };
+  }
+  render() {
+    const backLogos = this.props.stackBe.map(val => <img src={val} />);
+    const frontLogos = this.props.stackFe.map(val => <img src={val} />);
+
+    return (
+      <a
+        href={this.props.url}
+        className="project"
+        onMouseEnter={() => this.setState({ hovered: true })}
+        onMouseLeave={() => this.setState({ hovered: false })}
+      >
+        <CSSTransition
+          in={this.state.hovered}
+          timeout={200}
+          classNames="project"
+        >
+          {this.state.hovered ? (
+            <div className="project-hover">
+              <p style={{ marginBottom: "4px", fontWeight: "300" }}>Stack</p>
+              <div className="project-stack">
+                <p>FrontEnd:</p>
+                {frontLogos}
+              </div>
+              <div className="project-stack">
+                <p>BackEnd:</p>
+                {backLogos}
+              </div>
+            </div>
+          ) : (
+            <div className="project-main">
+              <p style={{ margin: "16px", fontWeight: "600" }}>
+                {this.props.nombre}
+              </p>
+              <p style={{ margin: "16px", font: "300 13px 'Montserrat'" }}>
+                {this.props.descripcion}
+              </p>
+            </div>
+          )}
+        </CSSTransition>
+      </a>
+    );
+  }
+}
 
 const MyHistory = props => {
   return (
@@ -146,11 +199,29 @@ const MyHistory = props => {
             nombre="lapo"
             descripcion="Estadisticas de Lapo BNT."
             url="https://bnt-lapo.appspot.com/"
+            stackFe={[HTMLLogo, JQueryLogo, SassLogo]}
+            stackBe={[PythonLogo, FlaskLogo]}
           />
           <Project
             nombre="cryptocartera"
             descripcion="Seguidor de cartera de cryptos y otros assets."
             url="https://github.com/TomasSuarezL/cryptocartera"
+            stackFe={[HTMLLogo, JQueryLogo, SassLogo, d3Logo]}
+            stackBe={[PythonLogo, FlaskLogo, PostgresLogo]}
+          />
+          <Project
+            nombre="react-cv"
+            descripcion="Personal CV built on React Stack."
+            url="https://github.com/TomasSuarezL/react-cv"
+            stackFe={[ReactLogo, ReduxLogo, SassLogo]}
+            stackBe={[]}
+          />
+          <Project
+            nombre="LambdaBrewer"
+            descripcion="Herramienta para crear recetas de cervezas."
+            url="https://github.com/TomasSuarezL/LambdaBrewer"
+            stackFe={[AndroidLogo]}
+            stackBe={[AndroidLogo]}
           />
         </div>
       </div>

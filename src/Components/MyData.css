@@ -1,43 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,600|Open+Sans");
 .my-data {
   display: flex;
   flex-direction: row;
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: auto; }
+  @media screen and (max-width: 1100px) {
+    .my-data {
+      flex-direction: column; } }
   .my-data .personal-data-div {
-    flex: 1;
-    margin: 4px;
-    animation: all 3s ease-in-out; }
-
-.example-enter {
-  transform: scaleX(0);
-  transform-origin: center left; }
-
-.example-enter-active {
-  transform: scaleX(1);
-  transition: all 150ms ease; }
-
-.example-exit {
-  transform: scaleX(1);
-  transform-origin: center left; }
-
-.example-exit-active {
-  transform: scaleX(0);
-  transition: all 150ms ease; }
-
-.star-enter {
-  opacity: 0.01; }
-
-.star-enter-active {
-  opacity: 1;
-  transform: translateY(0%) scale(1.25);
-  transition: all 300ms ease-out; }
-
-.star-exit {
-  opacity: 1;
-  flex: 0.001; }
-
-.star-exit-active {
-  transform: scale(4);
-  transition: all 300ms ease-in;
-  flex: 0.0001; }
+    margin: 4px; }

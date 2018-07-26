@@ -15,4 +15,54 @@ body {
   display: flex;
   flex-direction: column;
   padding: 8px;
-  margin: 24px; }
+  margin: 8px 8vw; }
+  .main-container .toggle {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    .main-container .toggle #toggle-lang {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      padding: 0.5rem;
+      background-color: #354f52;
+      border: none;
+      margin: 4px 4px 4px 16px;
+      color: #cad2c5;
+      font: 300 14px "Montserrat";
+      outline: 0;
+      width: 10rem;
+      text-align: center; }
+      .main-container .toggle #toggle-lang:hover {
+        cursor: pointer;
+        background-color: #52796f; }
+      .main-container .toggle #toggle-lang p {
+        color: #52796f;
+        flex: 1;
+        margin: 0;
+        padding: 8px; }
+      .main-container .toggle #toggle-lang .toggle-switch {
+        width: 3.5rem;
+        background-color: #84a98c;
+        color: #cad2c5;
+        padding: 0.5rem;
+        transition: all 0.3s ease-in-out; }
+
+.language-enter {
+  opacity: 0;
+  transform: translateY(10rem); }
+
+.language-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.2s ease-in-out; }
+
+.language-exit {
+  opacity: 0.01;
+  transform: translateY(-10rem); }
+
+.language-exit-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.2s ease-out; }

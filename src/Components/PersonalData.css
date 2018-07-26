@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,600|Open+Sans");
 .personal-data {
+  flex: 2;
   display: flex;
   overflow: hidden;
   flex-direction: column;
-  transition: flex-grow 0.3s ease; }
+  transition: flex-grow 0.2s ease; }
   .personal-data.collapse {
-    flex-grow: 0.01; }
+    flex-grow: 0.001; }
   .personal-data .portrait-name {
     display: flex;
     flex-direction: row; }
@@ -18,7 +19,7 @@
     .personal-data .portrait-name .name {
       flex: 3;
       padding: 16px;
-      background-color: #354f52; }
+      background-color: #52796f; }
       .personal-data .portrait-name .name h1 {
         font: 600 24px "Montserrat";
         margin: 8px 0 0 8px;
@@ -37,24 +38,36 @@
     flex: 1;
     display: flex;
     flex-direction: row;
-    height: 5rem;
     padding: 8px;
     margin-top: 8px;
-    background-color: #354f52;
-    overflow: hidden; }
-  .personal-data .contacto .contacto-field {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 16px; }
-    .personal-data .contacto .contacto-field svg,
-    .personal-data .contacto .contacto-field i {
-      width: 32px;
-      margin-right: 12px;
-      text-align: center;
-      fill: #cad2c5; }
-    .personal-data .contacto .contacto-field a {
-      flex: 1;
-      text-decoration: none;
-      color: #cad2c5; }
+    background-color: #354f52; }
+    .personal-data-section p {
+      height: 4rem; }
+  .personal-data .contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3rem 3rem;
+    overflow: visible; }
+    @media screen and (max-width: 1100px) {
+      .personal-data .contacto {
+        grid-template-columns: 1fr 1fr; } }
+    .personal-data .contacto .contacto-field {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 16px;
+      white-space: nowrap;
+      font: 300 12px "Montserrat"; }
+      .personal-data .contacto .contacto-field svg,
+      .personal-data .contacto .contacto-field i {
+        width: 24px;
+        margin-right: 12px;
+        text-align: center;
+        fill: #cad2c5; }
+      .personal-data .contacto .contacto-field a {
+        flex: 1;
+        text-decoration: none;
+        color: #cad2c5;
+        transition: color 0.2s ease-in-out; }
+        .personal-data .contacto .contacto-field a:hover {
+          color: #52796f; }

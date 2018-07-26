@@ -17,5 +17,63 @@ body {
   display: flex;
   flex-direction: column;
   padding: 8px;
-  margin: 24px;
+  margin: 8px 8vw;
+
+  .toggle {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    #toggle-lang {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      padding: 0.5rem;
+      background-color: $dark;
+      border: none;
+      margin: 4px 4px 4px 16px;
+      color: $light;
+      font: 300 14px "Montserrat";
+      outline: 0;
+      width: 10rem;
+      text-align: center;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $primary;
+      }
+      p {
+        color: $primary;
+        flex: 1;
+        margin: 0;
+        padding: 8px;
+      }
+      .toggle-switch {
+        width: 3.5rem;
+        background-color: $primary-light;
+        color: $light;
+        padding: 0.5rem;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}
+.language-enter {
+  opacity: 0;
+  transform: translateY(10rem);
+}
+.language-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.2s ease-in-out;
+}
+
+.language-exit {
+  opacity: 0.01;
+  transform: translateY(-10rem);
+}
+.language-exit-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.2s ease-out;
 }
