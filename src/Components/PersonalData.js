@@ -75,7 +75,7 @@ const PersonalData = props => {
             width="40px"
             height="40px"
             viewBox="0 0 500 500"
-            enable-background="new 0 0 500 500"
+            enableBackground="new 0 0 500 500"
           >
             <g>
               <path d="M250.001,0C111.927,0,0,111.927,0,250.001C0,388.077,111.927,500,250.001,500C388.073,500,500,388.077,500,250.001   C500,111.927,388.073,0,250.001,0z M250.001,458.943c-115.212,0-208.941-93.733-208.941-208.942   c0-115.208,93.729-208.941,208.941-208.941c115.208,0,208.938,93.733,208.938,208.941   C458.939,365.21,365.21,458.943,250.001,458.943z" />
@@ -86,9 +86,9 @@ const PersonalData = props => {
         </div>
       </div>
       <div className="personal-data-section">
+        <h3>{props.aboutMeTitle}</h3>
         <p style={{ margin: "8px", font: "300 14px 'Montserrat'" }}>
-          Ingeniero con ganas de aprender y mejorar?, superar nuevos desafios
-          que me permitan lograrlo? Resolucion de problemas?
+          {props.aboutMe}
         </p>
       </div>
     </div>

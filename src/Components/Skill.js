@@ -6,6 +6,7 @@ const Skill = props => {
   for (let i = 0; i < props.skillPoints; i++) {
     skillPoints.push(
       <div
+        key={i}
         style={{ backgroundColor: props.skillColor }}
         className="skill-point"
       />
@@ -15,6 +16,7 @@ const Skill = props => {
   for (let i = 0; i < 5 - props.skillPoints; i++) {
     skillPoints.push(
       <div
+        key={i + props.skillPoints}
         style={{ backgroundColor: props.skillColor, opacity: "0.5" }}
         className="skill-point"
       />

@@ -49,20 +49,8 @@ body {
         padding: 0.5rem;
         transition: all 0.3s ease-in-out; }
 
-.language-enter {
-  opacity: 0;
-  transform: translateY(10rem); }
-
-.language-enter-active {
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.2s ease-in-out; }
-
-.language-exit {
-  opacity: 0.01;
-  transform: translateY(-10rem); }
-
-.language-exit-active {
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.2s ease-out; }
+h3 {
+  text-align: center;
+  font: 400 24px "Open Sans";
+  margin: 8px;
+  white-space: nowrap; }

@@ -7,7 +7,9 @@ import Skills from "./Skills";
 
 const mapStateToProps = state => {
   return {
-    title: state.title
+    title: state.title,
+    aboutMe: state.aboutMe,
+    aboutMeTitle: state.aboutMeTitle
   };
 };
 
@@ -33,7 +35,7 @@ class MyData extends Component {
         <PersonalData
           collapse={collapseStyle}
           nombre={this.props.nombre}
-          title={this.props.title}
+          {...this.props}
         />
         <Skills
           handleCollapse={this.handleCollapse}
