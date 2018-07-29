@@ -1,1 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,600|Open+Sans");
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem); } }

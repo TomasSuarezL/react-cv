@@ -3,7 +3,7 @@ import "./Hobbies.css";
 
 const Hobbies = props => {
   return (
-    <div className="hobbies-container">
+    <div className="hobbies-container container">
       <h3>Interests & Hobbies</h3>
       <div className="hobbies">
         <div className="hobby">

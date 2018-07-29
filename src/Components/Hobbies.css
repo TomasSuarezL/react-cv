@@ -1,11 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,600|Open+Sans");
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem); } }
+
 .hobbies-container {
+  opacity: 0;
   background-color: #354f52;
   margin: 4px;
-  padding: 8px; }
+  padding: 8px;
+  animation: 0.3s ease-in 0.6s forwards appear; }
   .hobbies-container h3 {
-    text-align: center;
-    font: 400 24px "Open Sans";
     margin: 8px; }
   .hobbies-container .hobbies {
     display: flex;

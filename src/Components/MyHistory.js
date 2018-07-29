@@ -18,7 +18,7 @@ const MyEducation = props => {
     <div className="timeline">
       <div className="timeline-header">
         <div>
-          <i className="material-icons">school</i>
+          <i class="fa fa-graduation-cap fa-lg" />
         </div>
         <h3>Educación</h3>
       </div>
@@ -91,7 +91,7 @@ const MyExperience = props => {
     <div className="timeline">
       <div className="timeline-header">
         <div>
-          <i className="material-icons">business</i>
+          <i class="fa fa-briefcase fa-lg" />
         </div>
         <h3>Experiencia Laboral</h3>
       </div>
@@ -120,6 +120,54 @@ const MyExperience = props => {
         </div>
         <div className="event event-descripcion">
           Auxiliar de Sistemas - Desarrollador
+        </div>
+      </div>
+      <div className="timeline-row">
+        <div className="timeline-container">
+          <div className="line" />
+          <br />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const MyCourses = props => {
+  return (
+    <div className="timeline">
+      <div className="timeline-header">
+        <div>
+          <i class="fa fa-certificate fa-lg" />
+        </div>
+        <h3>Cursos & Certificados</h3>
+      </div>
+      <div className="timeline-row">
+        <div className="timeline-container">
+          <div className="line" />
+          <br />
+        </div>
+      </div>
+      <div className="timeline-row">
+        <div className="timeline-container">
+          <div className="line" />
+          <div className="event-mark" />
+        </div>
+        <div className="event event-header">2009 - 2016</div>
+      </div>
+      <div className="timeline-row">
+        <div className="timeline-container">
+          <div className="line" />
+        </div>
+        <div className="event event-titulo">
+          Universidad Tecnológica Nacional (UTN)
+        </div>
+      </div>
+      <div className="timeline-row">
+        <div className="timeline-container">
+          <div className="line" />
+        </div>
+        <div className="event event-descripcion">
+          Ingeniería en Sistemas de Información
         </div>
       </div>
       <div className="timeline-row">
@@ -186,14 +234,18 @@ class Project extends Component {
 const MyHistory = props => {
   return (
     <div className="history-projects">
-      <div className="history">
+      <div className="history container">
         <MyExperience />
         <br />
         <MyEducation />
         <br />
+        <MyCourses />
+        <br />
       </div>
-      <div className="projects-container">
-        <h3>Proyectos</h3>
+      <div className="projects-container container">
+        <h3>
+          <i style={{ marginRight: "16px" }} class="fa fa-edit fa-sm" />PROYECTOS
+        </h3>
         <div className="projects">
           <Project
             nombre="lapo"

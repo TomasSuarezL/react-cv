@@ -1,12 +1,12 @@
 @import "../Theme.scss";
 
 .hobbies-container {
+  opacity: 0;
   background-color: $dark;
   margin: 4px;
   padding: 8px;
+  @include appear(0.6s, $animation-duration);
   h3 {
-    text-align: center;
-    font: 400 24px "Open Sans";
     margin: 8px;
   }
   .hobbies {

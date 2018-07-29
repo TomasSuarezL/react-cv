@@ -5,9 +5,8 @@
   background-color: $dark;
   display: flex;
   flex-direction: column;
-  padding: 8px;
   overflow: hidden;
-
+  @include appear(0s, $animation-duration + 0.4);
   .skills {
     display: flex;
     flex-direction: row;

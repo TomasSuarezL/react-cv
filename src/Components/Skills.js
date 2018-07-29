@@ -71,7 +71,7 @@ const FullSkills = props => {
           skillName="SQLServer"
           skillImg={SQLServerLogo}
           skillPoints="4"
-          skillColor="rgba(196,22,29,1)"
+          skillColor="rgba(242,22,29,1)"
         />
         <Skill
           key="postgresql"
@@ -118,11 +118,11 @@ const TopSkills = props => {
           skillColor="rgba(157,200,217,1)"
         />
         <Skill
-          key="sql"
-          skillName="SQL"
-          skillImg="https://uploads.toptal.io/blog/category/logo/60/sql.png"
+          key="sqlserver"
+          skillName="SQLServer"
+          skillImg={SQLServerLogo}
           skillPoints="4"
-          skillColor="rgba(68,116,202,1)"
+          skillColor="rgba(242,55,71,1)"
         />
       </div>
     </div>
@@ -136,8 +136,10 @@ const Skills = props => {
   }
 
   return (
-    <div className="skills-container personal-data-div">
-      <h3>Skills</h3>{" "}
+    <div className="skills-container personal-data-div container ">
+      <h3>
+        <i style={{ marginRight: "16px" }} class="far fa-chart-bar fa-sm" />Skills
+      </h3>{" "}
       <CSSTransition in={props.collapsed} timeout={500} classNames="skills">
         {props.collapsed ? <FullSkills /> : <TopSkills />}
       </CSSTransition>

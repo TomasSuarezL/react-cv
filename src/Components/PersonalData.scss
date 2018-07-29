@@ -12,8 +12,10 @@
   }
 
   .portrait-name {
+    opacity: 0;
     display: flex;
     flex-direction: row;
+    @include appear(0s, $animation-duration);
 
     .portrait {
       flex: 1 1 8rem;
@@ -53,7 +55,6 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 8px;
     margin-top: 8px;
     background-color: $dark;
     p {
@@ -62,10 +63,12 @@
   }
 
   .contacto {
+    opacity: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 3rem 3rem;
     overflow: visible;
+    padding: 16px;
+    @include appear(0.2s, $animation-duration);
 
     @media screen and (max-width: $large-break) {
       grid-template-columns: 1fr 1fr;
@@ -95,5 +98,9 @@
         }
       }
     }
+  }
+  .about-me {
+    opacity: 0;
+    @include appear(0.4s, $animation-duration);
   }
 }

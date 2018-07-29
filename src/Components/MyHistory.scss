@@ -9,17 +9,17 @@
   }
 
   .projects-container {
+    opacity: 0;
     flex: 1;
     display: flex;
     flex-direction: column;
     background-color: $dark;
     margin: 4px;
-    padding: 8px;
+    @include appear(0.5s, $animation-duration);
 
     h3 {
-      font: 400 24px "Open Sans";
       margin: 8px;
-      text-align: center;
+      text-align: left;
     }
 
     .projects {
@@ -58,6 +58,7 @@
             background-color: $darkest;
             border-radius: 4px;
             overflow: hidden;
+            padding: 8px;
 
             .project-stack {
               display: flex;
@@ -86,9 +87,11 @@
   }
 
   .history {
+    opacity: 0;
     margin: 4px;
     padding: 24px;
     background: $dark;
+    @include appear(0.4s, $animation-duration);
 
     .timeline {
       display: flex;
@@ -101,6 +104,7 @@
 
         h3 {
           flex: 1;
+          text-align: left;
           font: 400 20px "Open Sans";
           margin: 0;
           margin-left: 12px;

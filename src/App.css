@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,600|Open+Sans");
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem); } }
+
 html,
 body {
   height: 100%;
@@ -50,7 +58,12 @@ body {
         transition: all 0.3s ease-in-out; }
 
 h3 {
-  text-align: center;
-  font: 400 24px "Open Sans";
+  text-align: left;
+  font: 600 22px "Montserrat";
+  text-transform: uppercase;
   margin: 8px;
   white-space: nowrap; }
+
+.container {
+  padding: 16px;
+  border-left: 10px solid #52796f; }

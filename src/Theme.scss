@@ -7,3 +7,20 @@ $dark: #354f52;
 $primary-light: #84a98c;
 
 $large-break: 1100px;
+
+$animation-duration: 0.3s;
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+@mixin appear($delay, $duration) {
+  animation: $duration ease-in $delay forwards appear;
+}

@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,600|Open+Sans");
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem); } }
+
 .history-projects {
   display: flex;
   flex-direction: row; }
@@ -6,16 +14,16 @@
     .history-projects {
       flex-direction: column; } }
   .history-projects .projects-container {
+    opacity: 0;
     flex: 1;
     display: flex;
     flex-direction: column;
     background-color: #354f52;
     margin: 4px;
-    padding: 8px; }
+    animation: 0.3s ease-in 0.5s forwards appear; }
     .history-projects .projects-container h3 {
-      font: 400 24px "Open Sans";
       margin: 8px;
-      text-align: center; }
+      text-align: left; }
     .history-projects .projects-container .projects {
       flex: 1;
       display: flex;
@@ -46,7 +54,8 @@
           .history-projects .projects-container .projects .project div.project-hover {
             background-color: #2f3e46;
             border-radius: 4px;
-            overflow: hidden; }
+            overflow: hidden;
+            padding: 8px; }
             .history-projects .projects-container .projects .project div.project-hover .project-stack {
               display: flex;
               flex-direction: row;
@@ -64,9 +73,11 @@
           .history-projects .projects-container .projects .project div p {
             margin: 8px; }
   .history-projects .history {
+    opacity: 0;
     margin: 4px;
     padding: 24px;
-    background: #354f52; }
+    background: #354f52;
+    animation: 0.3s ease-in 0.4s forwards appear; }
     .history-projects .history .timeline {
       display: flex;
       flex-direction: column; }
@@ -76,6 +87,7 @@
         align-items: center; }
         .history-projects .history .timeline-header h3 {
           flex: 1;
+          text-align: left;
           font: 400 20px "Open Sans";
           margin: 0;
           margin-left: 12px; }

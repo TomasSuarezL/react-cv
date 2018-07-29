@@ -1,11 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,600|Open+Sans");
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem); } }
+
 .skills-container {
   flex: 1;
   background-color: #354f52;
   display: flex;
   flex-direction: column;
-  padding: 8px;
-  overflow: hidden; }
+  overflow: hidden;
+  animation: 0.7s ease-in 0s forwards appear; }
   .skills-container .skills {
     display: flex;
     flex-direction: row;

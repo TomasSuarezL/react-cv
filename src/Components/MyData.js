@@ -29,7 +29,7 @@ class MyData extends Component {
   }
 
   render() {
-    const collapseStyle = this.state.expandSkills ? "collapse" : "";
+    const collapseStyle = this.state.expandSkills ? " collapse" : "";
     return (
       <div className="my-data">
         <PersonalData
