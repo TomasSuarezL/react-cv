@@ -9,7 +9,11 @@ const mapStateToProps = state => {
   return {
     title: state.title,
     aboutMe: state.aboutMe,
-    aboutMeTitle: state.aboutMeTitle
+    aboutMeTitle: state.aboutMeTitle,
+    contactoTitle: state.contactoTitle,
+    languagesTitle: state.language + "s",
+    english: state.english,
+    spanish: state.spanish
   };
 };
 

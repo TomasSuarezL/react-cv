@@ -54,34 +54,45 @@
       height: 4rem; }
   .personal-data .contacto {
     opacity: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    overflow: visible;
     padding: 16px;
     animation: 0.3s ease-in 0.2s forwards appear; }
-    @media screen and (max-width: 1100px) {
-      .personal-data .contacto {
-        grid-template-columns: 1fr 1fr; } }
-    .personal-data .contacto .contacto-field {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding: 16px;
-      white-space: nowrap;
-      font: 300 12px "Montserrat"; }
-      .personal-data .contacto .contacto-field svg,
-      .personal-data .contacto .contacto-field i {
-        width: 24px;
-        margin-right: 12px;
-        text-align: center;
-        fill: #cad2c5; }
-      .personal-data .contacto .contacto-field a {
-        flex: 1;
-        text-decoration: none;
-        color: #cad2c5;
-        transition: color 0.2s ease-in-out; }
-        .personal-data .contacto .contacto-field a:hover {
-          color: #52796f; }
+    .personal-data .contacto .contacto-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      overflow: visible; }
+      @media screen and (max-width: 1100px) {
+        .personal-data .contacto .contacto-container {
+          grid-template-columns: 1fr 1fr; } }
+      .personal-data .contacto .contacto-container .contacto-field {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 8px;
+        white-space: nowrap;
+        font: 300 12px "Montserrat"; }
+        .personal-data .contacto .contacto-container .contacto-field svg,
+        .personal-data .contacto .contacto-container .contacto-field i {
+          width: 24px;
+          margin-right: 12px;
+          text-align: center;
+          fill: #cad2c5; }
+        .personal-data .contacto .contacto-container .contacto-field a {
+          flex: 1;
+          text-decoration: none;
+          color: #cad2c5;
+          transition: color 0.2s ease-in-out; }
+          .personal-data .contacto .contacto-container .contacto-field a:hover {
+            color: #52796f; }
   .personal-data .about-me {
     opacity: 0;
     animation: 0.3s ease-in 0.4s forwards appear; }
+  .personal-data-languages {
+    background-color: #354f52;
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    .personal-data-languages .languages {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      justify-content: space-around; }

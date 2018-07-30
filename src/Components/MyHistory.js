@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import { CSSTransition } from "react-transition-group";
 import "./MyHistory.css";
 import PythonLogo from "../Static/Techs/Python.svg";
@@ -12,6 +13,25 @@ import ReactLogo from "../Static/Techs/React.svg";
 import ReduxLogo from "../Static/Techs/Redux.svg";
 import AndroidLogo from "../Static/Techs/Android.svg";
 
+const mapStateToProps = state => {
+  return {
+    experience: {
+      experienceTitle: state.experienceTitle,
+      present: state.present,
+      workPosition: state.workPosition
+    },
+    education: {
+      educationTitle: state.educationTitle,
+      engineeringTitle: state.engineeringTitle,
+      technicianTitle: state.technicianTitle
+    },
+    courses: {
+      coursesTitle: state.coursesTitle
+    },
+    projectTitle: state.projectsTitle
+  };
+};
+
 /* Todo: Podria usar un Componente de Timeline para todos los items de historia, pasando un array de eventos como props. */
 const MyEducation = props => {
   return (
@@ -20,7 +40,7 @@ const MyEducation = props => {
         <div>
           <i class="fa fa-graduation-cap fa-lg" />
         </div>
-        <h3>Educación</h3>
+        <h3>{props.educationTitle}</h3>
       </div>
       <div className="timeline-row">
         <div className="timeline-container">
@@ -47,9 +67,7 @@ const MyEducation = props => {
         <div className="timeline-container">
           <div className="line" />
         </div>
-        <div className="event event-descripcion">
-          Ingeniería en Sistemas de Información
-        </div>
+        <div className="event event-descripcion">{props.engineeringTitle}</div>
       </div>
       <div className="timeline-row">
         <div className="timeline-container">
@@ -74,7 +92,7 @@ const MyEducation = props => {
         <div className="timeline-container">
           <div className="line" />
         </div>
-        <div className="event event-descripcion">Tecnico en Electrónica</div>
+        <div className="event event-descripcion">{props.technicianTitle}</div>
       </div>
       <div className="timeline-row">
         <div className="timeline-container">
@@ -93,7 +111,7 @@ const MyExperience = props => {
         <div>
           <i class="fa fa-briefcase fa-lg" />
         </div>
-        <h3>Experiencia Laboral</h3>
+        <h3>{props.experienceTitle}</h3>
       </div>
       <div className="timeline-row">
         <div className="timeline-container">
@@ -106,7 +124,7 @@ const MyExperience = props => {
           <div className="line" />
           <div className="event-mark" />
         </div>
-        <div className="event event-header">2012 - Actualidad</div>
+        <div className="event event-header">2012 - {props.present}</div>
       </div>
       <div className="timeline-row">
         <div className="timeline-container">
@@ -118,9 +136,7 @@ const MyExperience = props => {
         <div className="timeline-container">
           <div className="line" />
         </div>
-        <div className="event event-descripcion">
-          Auxiliar de Sistemas - Desarrollador
-        </div>
+        <div className="event event-descripcion">{props.workPosition}</div>
       </div>
       <div className="timeline-row">
         <div className="timeline-container">
@@ -139,7 +155,7 @@ const MyCourses = props => {
         <div>
           <i class="fa fa-certificate fa-lg" />
         </div>
-        <h3>Cursos & Certificados</h3>
+        <h3>{props.coursesTitle}</h3>
       </div>
       <div className="timeline-row">
         <div className="timeline-container">
@@ -235,16 +251,17 @@ const MyHistory = props => {
   return (
     <div className="history-projects">
       <div className="history container">
-        <MyExperience />
+        <MyExperience {...props.experience} />
         <br />
-        <MyEducation />
+        <MyEducation {...props.education} />
         <br />
-        <MyCourses />
+        <MyCourses {...props.courses} />
         <br />
       </div>
       <div className="projects-container container">
         <h3>
-          <i style={{ marginRight: "16px" }} class="fa fa-edit fa-sm" />PROYECTOS
+          <i style={{ marginRight: "16px" }} class="fa fa-edit fa-sm" />
+          {props.projectTitle}
         </h3>
         <div className="projects">
           <Project
@@ -281,4 +298,7 @@ const MyHistory = props => {
   );
 };
 
-export default MyHistory;
+export default connect(
+  mapStateToProps,
+  null
+)(MyHistory);

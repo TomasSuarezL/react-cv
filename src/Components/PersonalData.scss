@@ -64,37 +64,41 @@
 
   .contacto {
     opacity: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    overflow: visible;
     padding: 16px;
+
     @include appear(0.2s, $animation-duration);
 
-    @media screen and (max-width: $large-break) {
-      grid-template-columns: 1fr 1fr;
-    }
+    .contacto-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      overflow: visible;
 
-    .contacto-field {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding: 16px;
-      white-space: nowrap;
-      font: 300 12px "Montserrat";
-      svg,
-      i {
-        width: 24px;
-        margin-right: 12px;
-        text-align: center;
-        fill: $light;
+      @media screen and (max-width: $large-break) {
+        grid-template-columns: 1fr 1fr;
       }
-      a {
-        flex: 1;
-        text-decoration: none;
-        color: $light;
-        transition: color 0.2s ease-in-out;
-        &:hover {
-          color: $primary;
+
+      .contacto-field {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 8px;
+        white-space: nowrap;
+        font: 300 12px "Montserrat";
+        svg,
+        i {
+          width: 24px;
+          margin-right: 12px;
+          text-align: center;
+          fill: $light;
+        }
+        a {
+          flex: 1;
+          text-decoration: none;
+          color: $light;
+          transition: color 0.2s ease-in-out;
+          &:hover {
+            color: $primary;
+          }
         }
       }
     }
@@ -102,5 +106,19 @@
   .about-me {
     opacity: 0;
     @include appear(0.4s, $animation-duration);
+  }
+
+  &-languages {
+    background-color: $dark;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .languages {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      justify-content: space-around;
+    }
   }
 }

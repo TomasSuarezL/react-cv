@@ -71,7 +71,7 @@ const FullSkills = props => {
           skillName="SQLServer"
           skillImg={SQLServerLogo}
           skillPoints="4"
-          skillColor="rgba(242,22,29,1)"
+          skillColor="rgba(242,122,129,1)"
         />
         <Skill
           key="postgresql"
@@ -122,7 +122,7 @@ const TopSkills = props => {
           skillName="SQLServer"
           skillImg={SQLServerLogo}
           skillPoints="4"
-          skillColor="rgba(242,55,71,1)"
+          skillColor="rgba(242,122,129,1)"
         />
       </div>
     </div>

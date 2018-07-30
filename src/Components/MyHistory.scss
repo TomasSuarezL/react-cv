@@ -17,11 +17,6 @@
     margin: 4px;
     @include appear(0.5s, $animation-duration);
 
-    h3 {
-      margin: 8px;
-      text-align: left;
-    }
-
     .projects {
       flex: 1;
       display: flex;
@@ -40,8 +35,7 @@
 
       .project {
         height: 9rem;
-        min-width: 20rem;
-        max-width: 50%;
+        min-width: 22.5rem;
         display: flex;
         flex-direction: column;
         flex: 1 1 30%;
