@@ -29,11 +29,6 @@
       align-content: flex-start;
       align-items: flex-start;
       flex-wrap: wrap; }
-      .history-projects .projects-container .projects a {
-        margin: 0;
-        text-decoration: none;
-        color: #cad2c5;
-        overflow: hidden; }
       .history-projects .projects-container .projects .project {
         height: 9rem;
         min-width: 22.5rem;
@@ -43,6 +38,9 @@
         border: 1px solid #52796f;
         border-radius: 4px;
         margin: 8px; }
+        @media screen and (max-width: 700px) {
+          .history-projects .projects-container .projects .project {
+            min-width: 18.5rem; } }
         .history-projects .projects-container .projects .project div {
           height: 100%;
           display: flex;
@@ -125,6 +123,16 @@
         .history-projects .history .timeline-row .event-titulo {
           padding: 0 8px;
           font: 600 14px "Montserrat"; }
+          .history-projects .history .timeline-row .event-titulo a:hover {
+            color: #52796f; }
+        .history-projects .history .timeline-row .event-descripcion {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between; }
+          .history-projects .history .timeline-row .event-descripcion a {
+            transition: color 0.2s ease-in-out; }
+            .history-projects .history .timeline-row .event-descripcion a:hover {
+              color: #52796f; }
 
 .project-enter {
   opacity: 0;

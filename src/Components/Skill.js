@@ -25,7 +25,9 @@ const Skill = props => {
 
   return (
     <div className="skill">
-      <img src={props.skillImg} className="skill-logo" />
+      {props.skillImg ? (
+        <img src={props.skillImg} className="skill-logo" />
+      ) : null}
       <p style={{ color: props.skillColor }}>{props.skillName}</p>
       <div className="skill-bar">{skillPoints}</div>
     </div>

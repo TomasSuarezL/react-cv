@@ -17,9 +17,12 @@
     flex-direction: row;
     @include appear(0s, $animation-duration);
 
+    @media screen and (max-width: $short-break) {
+      flex-direction: column;
+    }
+
     .portrait {
       flex: 1 1 8rem;
-      max-width: 8rem;
       background: url("../yoni.jpg") no-repeat no-repeat center;
       background-size: cover;
       opacity: 0.5;
@@ -59,6 +62,9 @@
     background-color: $dark;
     p {
       height: 4rem;
+      @media screen and (max-width: $short-break) {
+        height: auto;
+      }
     }
   }
 
@@ -75,6 +81,10 @@
 
       @media screen and (max-width: $large-break) {
         grid-template-columns: 1fr 1fr;
+      }
+
+      @media screen and (max-width: $short-break) {
+        grid-template-columns: 1fr;
       }
 
       .contacto-field {
@@ -114,11 +124,19 @@
     flex-direction: row;
     align-items: center;
 
+    @media screen and (max-width: $short-break) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     .languages {
       display: flex;
       flex-direction: row;
       flex: 1;
       justify-content: space-around;
+      @media screen and (max-width: $short-break) {
+        flex-direction: column;
+      }
     }
   }
 }

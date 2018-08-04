@@ -7,9 +7,9 @@ const spanish = {
   english: "Inglés",
   spanish: "Español",
   contactoTitle: "Contacto",
-  aboutMeTitle: "Acerca Mío",
+  aboutMeTitle: "Acerca de Mí",
   aboutMe:
-    "Ingeniero con ganas de aprender y mejorar?, superar nuevos desafios que me permitan lograrlo? Resolucion de problemas?",
+    "Soy un ingeniero en sistemas de información con un verdadero interés por resolver problemas, intentando mejorar constantemente mis herramientas para lograrlo. Siempre buscando aprender.",
   experienceTitle: "Experiencia Laboral",
   present: "Actualidad",
   workPosition: "Auxiliar de Sistemas - Desarrollador",
@@ -36,7 +36,7 @@ const english = {
   contactoTitle: "Contact",
   aboutMeTitle: "About Me",
   aboutMe:
-    "Ingeniero con ganas de aprender y mejorar?, superar nuevos desafios que me permitan lograrlo? Resolucion de problemas?",
+    "I´m a Software Engineer with a special interest in problem solving, trying to improve constantly to achieve better results. Always trying to learn something new.",
   experienceTitle: "Work Experience",
   present: "Present",
   workPosition: "Help Desk - Developer",

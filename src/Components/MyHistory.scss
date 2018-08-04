@@ -26,13 +26,6 @@
       align-items: flex-start;
       flex-wrap: wrap;
 
-      a {
-        margin: 0;
-        text-decoration: none;
-        color: $light;
-        overflow: hidden;
-      }
-
       .project {
         height: 9rem;
         min-width: 22.5rem;
@@ -42,6 +35,9 @@
         border: 1px solid $primary;
         border-radius: 4px;
         margin: 8px;
+        @media screen and (max-width: $short-break) {
+          min-width: 18.5rem;
+        }
 
         div {
           height: 100%;
@@ -156,9 +152,21 @@
         .event-titulo {
           padding: 0 8px;
           font: 600 14px "Montserrat";
+          & a:hover {
+            color: $primary;
+          }
         }
 
         .event-descripcion {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          a {
+            transition: color 0.2s ease-in-out;
+            &:hover {
+              color: $primary;
+            }
+          }
         }
       }
     }

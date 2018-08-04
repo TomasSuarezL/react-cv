@@ -168,24 +168,48 @@ const MyCourses = props => {
           <div className="line" />
           <div className="event-mark" />
         </div>
-        <div className="event event-header">2009 - 2016</div>
+        <div className="event event-header">2016 - 2018</div>
       </div>
       <div className="timeline-row">
         <div className="timeline-container">
           <div className="line" />
         </div>
-        <div className="event event-titulo">
-          Universidad Tecnológica Nacional (UTN)
-        </div>
+        <div className="event event-titulo">freeCodeCamp - Certificates:</div>
       </div>
       <div className="timeline-row">
         <div className="timeline-container">
           <div className="line" />
         </div>
         <div className="event event-descripcion">
-          Ingeniería en Sistemas de Información
+          <a href="https://www.freecodecamp.org/certification/tomassuarezl/responsive-web-design">
+            Responsive
+          </a>
+          <a href="https://www.freecodecamp.org/certification/tomassuarezl/javascript-algorithms-and-data-structures">
+            Algorithms
+          </a>
+          <a href="https://www.freecodecamp.org/certification/tomassuarezl/front-end-libraries">
+            Front End
+          </a>
         </div>
       </div>
+      <div className="timeline-row">
+        <div className="timeline-container">
+          <div className="line" />
+          <div className="event-mark" />
+        </div>
+        <div className="event event-header">2018</div>
+      </div>
+      <div className="timeline-row">
+        <div className="timeline-container">
+          <div className="line" />
+        </div>
+        <div className="event event-titulo">
+          <a href="https://www.udemy.com/certificate/UC-KJP55GPD/">
+            Udemy - Web Bootcamp
+          </a>
+        </div>
+      </div>
+
       <div className="timeline-row">
         <div className="timeline-container">
           <div className="line" />
