@@ -38,7 +38,7 @@ const MyEducation = props => {
     <div className="timeline">
       <div className="timeline-header">
         <div>
-          <i class="fa fa-graduation-cap fa-lg" />
+          <i className="fa fa-graduation-cap fa-lg" />
         </div>
         <h3>{props.educationTitle}</h3>
       </div>
@@ -109,7 +109,7 @@ const MyExperience = props => {
     <div className="timeline">
       <div className="timeline-header">
         <div>
-          <i class="fa fa-briefcase fa-lg" />
+          <i className="fa fa-briefcase fa-lg" />
         </div>
         <h3>{props.experienceTitle}</h3>
       </div>
@@ -153,7 +153,7 @@ const MyCourses = props => {
     <div className="timeline">
       <div className="timeline-header">
         <div>
-          <i class="fa fa-certificate fa-lg" />
+          <i className="fa fa-certificate fa-lg" />
         </div>
         <h3>{props.coursesTitle}</h3>
       </div>
@@ -228,8 +228,12 @@ class Project extends Component {
     };
   }
   render() {
-    const backLogos = this.props.stackBe.map(val => <img src={val} />);
-    const frontLogos = this.props.stackFe.map(val => <img src={val} />);
+    const backLogos = this.props.stackBe.map(val => (
+      <img src={val} alt={val} key={val} />
+    ));
+    const frontLogos = this.props.stackFe.map(val => (
+      <img src={val} alt={val} key={val} />
+    ));
 
     return (
       <a
@@ -284,11 +288,12 @@ const MyHistory = props => {
       </div>
       <div className="projects-container container">
         <h3>
-          <i style={{ marginRight: "16px" }} class="fa fa-edit fa-sm" />
+          <i style={{ marginRight: "16px" }} className="fa fa-edit fa-sm" />
           {props.projectTitle}
         </h3>
         <div className="projects">
           <Project
+            key="lapo"
             nombre="lapo"
             descripcion="Estadisticas de Lapo BNT."
             url="https://bnt-lapo.appspot.com/"
@@ -296,6 +301,7 @@ const MyHistory = props => {
             stackBe={[PythonLogo, FlaskLogo]}
           />
           <Project
+            key="crpyto"
             nombre="cryptocartera"
             descripcion="Seguidor de cartera de cryptos y otros assets."
             url="https://github.com/TomasSuarezL/cryptocartera"
@@ -303,6 +309,7 @@ const MyHistory = props => {
             stackBe={[PythonLogo, FlaskLogo, PostgresLogo]}
           />
           <Project
+            key="react-cv"
             nombre="react-cv"
             descripcion="Personal CV built on React Stack."
             url="https://github.com/TomasSuarezL/react-cv"
@@ -310,6 +317,7 @@ const MyHistory = props => {
             stackBe={[]}
           />
           <Project
+            key="lambdabrewer"
             nombre="LambdaBrewer"
             descripcion="Herramienta para crear recetas de cervezas."
             url="https://github.com/TomasSuarezL/LambdaBrewer"

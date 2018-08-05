@@ -39,6 +39,7 @@ class MyData extends Component {
         <PersonalData
           collapse={collapseStyle}
           nombre={this.props.nombre}
+          apellido={this.props.apellido}
           {...this.props}
         />
         <Skills
@@ -51,7 +52,8 @@ class MyData extends Component {
 }
 
 MyData.propTypes = {
-  nombre: PropTypes.string.isRequired
+  nombre: PropTypes.string.isRequired,
+  apellido: PropTypes.string.isRequired
 };
 
 export default connect(

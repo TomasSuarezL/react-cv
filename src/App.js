@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-import { CSSTransition } from "react-transition-group";
 import { translateReducer } from "./Reducers/Translate";
 import { toggleLang } from "./Actions/Translate";
 import MyData from "./Components/MyData";
@@ -15,17 +14,22 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      nombre: "Ing. Tomás Suárez Lissi",
+      nombre: "Tomás",
+      apellido: "Suarez Lissi",
       idLang: store.getState().id
     };
     this.handleChange = this.handleChange.bind(this);
-    const unsubscribe = store.subscribe(this.handleChange);
+    this.unsubscribe = store.subscribe(this.handleChange);
   }
 
   handleChange() {
     this.setState({
       idLang: store.getState().id
     });
+  }
+
+  componentWillUnmount() {
+    this.unsubscribe();
   }
 
   render() {
@@ -42,7 +46,7 @@ class App extends Component {
                 className="toggle-switch"
                 style={{
                   transform:
-                    this.state.idLang == "ENG"
+                    this.state.idLang === "ENG"
                       ? "translate(0%)"
                       : "translate(100%)"
                 }}
@@ -51,7 +55,7 @@ class App extends Component {
               </div>
             </button>
           </div>
-          <MyData nombre={this.state.nombre} />
+          <MyData nombre={this.state.nombre} apellido={this.state.apellido} />
           <MyHistory />
           <Hobbies />
         </div>

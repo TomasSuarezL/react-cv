@@ -33,7 +33,7 @@
       background-color: $primary;
 
       h1 {
-        font: 600 24px "Montserrat";
+        font: 300 26px "Montserrat";
         margin: 8px 0 0 8px;
         white-space: nowrap;
       }
@@ -44,7 +44,8 @@
       }
 
       div {
-        margin-top: 16px;
+        margin: 0px 8px;
+        margin-top: 4rem;
         display: flex;
         white-space: nowrap;
         i {

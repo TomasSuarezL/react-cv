@@ -3,7 +3,6 @@ import { CSSTransition } from "react-transition-group";
 import Skill from "./Skill";
 import "./Skills.css";
 import PythonLogo from "../Static/Techs/Python.svg";
-import JQueryLogo from "../Static/Techs/jquery-original.svg";
 import SassLogo from "../Static/Techs/Sass.svg";
 import PostgresLogo from "../Static/Techs/Postgresql.svg";
 import ReactLogo from "../Static/Techs/React.svg";
@@ -131,14 +130,13 @@ const TopSkills = props => {
 
 const Skills = props => {
   function handleCollapse() {
-    console.log("handle collapse");
     props.handleCollapse();
   }
 
   return (
     <div className="skills-container personal-data-div container ">
       <h3>
-        <i style={{ marginRight: "16px" }} class="far fa-chart-bar fa-sm" />Skills
+        <i style={{ marginRight: "16px" }} className="far fa-chart-bar fa-sm" />Skills
       </h3>{" "}
       <CSSTransition in={props.collapsed} timeout={500} classNames="skills">
         {props.collapsed ? <FullSkills /> : <TopSkills />}

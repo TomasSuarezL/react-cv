@@ -11,7 +11,10 @@ const PersonalData = props => {
         <div style={{ backgroundColor: "#ececec", width: "0.35rem" }} />
         <div style={{ backgroundColor: "#5c98b1", width: "0.35rem" }} />
         <div className="name">
-          <h1>{props.nombre}</h1>
+          <h1>
+            {props.nombre + " "}
+            <strong>{props.apellido.toUpperCase()}</strong>
+          </h1>
           <p>{props.title}</p>
           <div>
             <i className="fas fa-map-marker-alt fa-lg" />Buenos Aires, Argentina
@@ -37,47 +40,47 @@ const PersonalData = props => {
         <h3>
           <i
             style={{ marginRight: "16px" }}
-            class="far fa-address-card fa-sm"
+            className="far fa-address-card fa-sm"
           />
           {props.contactoTitle}
         </h3>
         <div className="contacto-container">
           <div className="contacto-field">
-            <i class="far fa-envelope fa-2x" />
+            <i className="far fa-envelope fa-2x" />
             <a href="https://github.com/TomasSuarezL">tomas.sl@hotmail.com</a>
           </div>
           <div className="contacto-field">
-            <i class="fas fa-phone fa-2x" />
+            <i className="fas fa-phone fa-2x" />
             <a style={{ pointerEvents: "none", cursor: "default" }} href="">
               +54 11 31104987{" "}
             </a>
           </div>
           <div className="contacto-field">
-            <i class="fab fa-linkedin fa-2x" />
+            <i className="fab fa-linkedin fa-2x" />
             <a href="https://www.linkedin.com/in/tomas-suarez-lissi-62a180147/">
               Tomás Suarez Lissi
             </a>
           </div>
 
           <div className="contacto-field">
-            <i class="fab fa-github fa-2x" />
+            <i className="fab fa-github fa-2x" />
             <a href="https://github.com/TomasSuarezL">TomasSuarezL</a>
           </div>
           <div className="contacto-field">
-            <i class="fab fa-free-code-camp fa-2x" />
+            <i className="fab fa-free-code-camp fa-2x" />
             <a href="https://www.freecodecamp.org/tomassuarezl">
               @tomassuarezl
             </a>
           </div>
           <div className="contacto-field">
-            <i class="fab fa-codepen fa-2x" />
+            <i className="fab fa-codepen fa-2x" />
             <a href="https://codepen.io/TomasSL/">@TomasSL</a>
           </div>
         </div>
       </div>
       <div className="personal-data-section about-me container">
         <h3>
-          <i style={{ marginRight: "16px" }} class="far fa-user fa-sm" />
+          <i style={{ marginRight: "16px" }} className="far fa-user fa-sm" />
           {props.aboutMeTitle}
         </h3>
         <p style={{ margin: "8px", font: "300 14px 'Montserrat'" }}>

@@ -17,7 +17,7 @@ const Skill = props => {
     skillPoints.push(
       <div
         key={i + props.skillPoints}
-        style={{ backgroundColor: props.skillColor, opacity: "0.5" }}
+        style={{ backgroundColor: props.skillColor, opacity: "0.2" }}
         className="skill-point"
       />
     );
